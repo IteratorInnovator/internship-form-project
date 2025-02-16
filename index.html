@@ -11,19 +11,23 @@
         <h1 id="title">Internship Application Form</h1>
         <p class="miscellaneous" id="description">Thank you for your interest in the Internship Programme!</p>
         <p class="miscellaneous" id="description">Please fill up the following details below.</p>
-        <form id="survey-form" method="post">
+        <form id="survey-form" action="#" method="post">
             <fieldset class="input_text_fieldset">
 
-                <label for="name"><legend>Full Name (as per NRIC)</legend>
-                    <input type="text" name="fullname" id="name" required>
+                <label for="name" id="name-label">Full Name (as per NRIC)
+                    <input type="text" name="fullname" id="name" placeholder="Enter your name" required>
                 </label>
 
-                <label for="email"><legend>Email Address</legend>
-                    <input type="email" name="email" id="email" required>
+                <label for="email" id="email-label">Email Address
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required>
                 </label>
 
-                <label for="phone_number"><legend>Phone Number</legend>
-                    <input type="phone_number" name="phone_number" id="phone_number" required>
+                <label for="number" id="number-label">Age
+                    <input type="number" name="phone_number" id="number" min="10" max="100" placeholder="Enter your age" required>
+                </label>
+
+                <label for="phone_number">Phone Number
+                    <input type="text" name="phone_number" id="phone_number" required>
                 </label>
 
             </fieldset>
@@ -38,12 +42,13 @@
                     </p>
                     <input type="file" name="resume" id="drop_area" required>
                 </label>
-                <label for="role"><legend>Select preferred role</legend>
+
+                <label for="role" id="dropdown"><legend>Select preferred role</legend>
                     <select name="preferred_role" id="role" required>
                         <option value="1">Software Engineer</option>
                         <option value="2">UI/UX Designer</option>
                         <option value="3">Business Analyst</option>
-                        <option value="4">Devops Engineer</option>
+                        <option value="4">DevOps Engineer</option>
                         <option value="5">AI Engineer</option>
                         <option value="6">Product Manager</option>
                     </select>
@@ -53,17 +58,15 @@
 
             <fieldset class="citizenship_fieldset">
                 <legend>Citizenship</legend>
-                    <label for="SG"><input type="radio" name="citizenship" id="SG">
-                        Singaporean Citizen
-                    </label><br>
-                    <label for="PR"><input type="radio" name="citizenship" id="PR">
-                        Singaporean PR
-                    </label><br>
-                    <label for="FR"><input type="radio" name="citizenship" id="FR">
-                        Foreigner
-                    </label><br>
-                </label>
-
+                <label for="SG"><input type="radio" name="citizenship" id="SG" value="SG">
+                    Singaporean Citizen
+                </label><br>
+                <label for="PR"><input type="radio" name="citizenship" id="PR" value="PR">
+                    Singaporean PR
+                </label><br>
+                <label for="FR"><input type="radio" name="citizenship" id="FR" value="FR">
+                    Foreigner
+                </label><br>
             </fieldset>
 
             <fieldset class="education_fieldset">
@@ -78,7 +81,6 @@
                         <option value="SUSS">Singapore University of Social Sciences (SUSS)</option>
                         <option value="SIM">Singapore Institute of Management (SIM)</option>
                     </select>
-
                 </label>
 
                 <label for="year_of_study"><legend>Year of Study</legend>
@@ -94,28 +96,53 @@
 
             </fieldset>
 
-        <fieldset class="input_text_fieldset">
+            <fieldset class="input_text_fieldset">
 
-            <label for="start_date"><legend>Internship Start Date</legend>
-                <p class="instruction">
-                    Please let us know your earliest availability to start the internship.<br><br>
-                    Interns are REQUIRED to start on a Monday and end on a Friday.<br>
-                    Kindly note that all interns are required to commit at least 12 weeks (3 months) of full-time internship.
-                </p>
-                <input type="date" name="start_date" id="start_date" placeholder="DD/MM/YYYY">
-            </label>
-            <label for="end_date"><legend>Internship End Date</legend>
-                <input type="date" name="end_date" id="end_date" placeholder="DD/MM/YYYY">
-            </label>
+                <label for="start_date"><legend>Internship Start Date</legend>
+                    <p class="instruction">
+                        Please let us know your earliest availability to start the internship.<br><br>
+                        Interns are REQUIRED to start on a Monday and end on a Friday.<br>
+                        Kindly note that all interns are required to commit at least 12 weeks (3 months) of full-time internship.
+                    </p>
+                    <input type="date" name="start_date" id="start_date" placeholder="DD/MM/YYYY">
+                </label>
 
-        </fieldset>
+                <label for="end_date"><legend>Internship End Date</legend>
+                    <input type="date" name="end_date" id="end_date" placeholder="DD/MM/YYYY">
+                </label>
 
-        <fieldset>
-            <p class="terms_and_conditions">By submitting this application, you confirm that all information provided is accurate and truthful. Acceptance into the internship program is subject to eligibility, availability, and the organization's discretion. Interns must adhere to company policies, maintain confidentiality, and conduct themselves professionally. The organization reserves the right to modify, suspend, or terminate the internship at any time. By applying, you agree to these terms and conditions.</p>
-        </fieldset>
-        <p>test change</p>
+            </fieldset>
 
-            <input type="submit" value="Submit Application">
+            <!-- Added Checkboxes -->
+            <fieldset class="checkbox_fieldset">
+                <legend>Preferred Work Arrangement</legend>
+                <label for="remote">
+                    <input type="checkbox" name="work_arrangement" id="remote" value="Remote">
+                    Remote
+                </label><br>
+                <label for="hybrid">
+                    <input type="checkbox" name="work_arrangement" id="hybrid" value="Hybrid">
+                    Hybrid (Office + Remote)
+                </label><br>
+                <label for="onsite">
+                    <input type="checkbox" name="work_arrangement" id="onsite" value="On-site">
+                    On-site (Full-time at Office)
+                </label>
+            </fieldset>
+
+            <!-- Added Textarea -->
+            <fieldset class="textarea_fieldset">
+                <legend>Additional Comments</legend>
+                <label for="comments">
+                    <textarea name="comments" id="comments" rows="4" cols="50" placeholder="Any additional information or requests"></textarea>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <p class="terms_and_conditions">By submitting this application, you confirm that all information provided is accurate and truthful. Acceptance into the internship program is subject to eligibility, availability, and the organization's discretion. Interns must adhere to company policies, maintain confidentiality, and conduct themselves professionally. The organization reserves the right to modify, suspend, or terminate the internship at any time. By applying, you agree to these terms and conditions.</p>
+            </fieldset>
+
+            <input type="submit" value="Submit Application" id="submit">
         </form>
     </div>
 </body>

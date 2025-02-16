@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <div class="div-container">
+        <h1 id="title">Internship Application Form</h1>
+        <p class="miscellaneous" id="description">Thank you for your interest in the Internship Programme!</p>
+        <p class="miscellaneous" id="description">Please fill up the following details below.</p>
+        <form id="survey-form" method="post">
+            <fieldset class="input_text_fieldset">
+
+                <label for="name"><legend>Full Name (as per NRIC)</legend>
+                    <input type="text" name="fullname" id="name" required>
+                </label>
+
+                <label for="email"><legend>Email Address</legend>
+                    <input type="email" name="email" id="email" required>
+                </label>
+
+                <label for="phone_number"><legend>Phone Number</legend>
+                    <input type="phone_number" name="phone_number" id="phone_number" required>
+                </label>
+
+            </fieldset>
+
+            <fieldset class="input_text_fieldset">
+
+                <label for="drop_area"><legend>Resume</legend>
+                    <p class="instruction">Please upload your most updated resume here using the naming convention below:<br><br>
+                        fullname_resume<br>
+                        (e.g. ngkokjing_resume)<br><br>
+                        Please do not include details on your NRIC in the resume/CV.<br>
+                    </p>
+                    <input type="file" name="resume" id="drop_area" required>
+                </label>
+                <label for="role"><legend>Select preferred role</legend>
+                    <select name="preferred_role" id="role" required>
+                        <option value="1">Software Engineer</option>
+                        <option value="2">UI/UX Designer</option>
+                        <option value="3">Business Analyst</option>
+                        <option value="4">Devops Engineer</option>
+                        <option value="5">AI Engineer</option>
+                        <option value="6">Product Manager</option>
+                    </select>
+                </label>
+
+            </fieldset>
+
+            <fieldset class="citizenship_fieldset">
+                <legend>Citizenship</legend>
+                    <label for="SG"><input type="radio" name="citizenship" id="SG">
+                        Singaporean Citizen
+                    </label><br>
+                    <label for="PR"><input type="radio" name="citizenship" id="PR">
+                        Singaporean PR
+                    </label><br>
+                    <label for="FR"><input type="radio" name="citizenship" id="FR">
+                        Foreigner
+                    </label><br>
+                </label>
+
+            </fieldset>
+
+            <fieldset class="education_fieldset">
+
+                <label for="school"><legend>Name of Current Institution</legend>
+                    <select name="school" id="school" required>
+                        <option value="NUS">National University of Singapore (NUS)</option>
+                        <option value="NTU">Nanyang Technological University (NTU)</option>
+                        <option value="SMU">Singapore Management University (SMU)</option>
+                        <option value="SUTD">Singapore University of Technology and Design (SUTD)</option>
+                        <option value="SIT">Singapore Institute of Technology (SIT)</option>
+                        <option value="SUSS">Singapore University of Social Sciences (SUSS)</option>
+                        <option value="SIM">Singapore Institute of Management (SIM)</option>
+                    </select>
+
+                </label>
+
+                <label for="year_of_study"><legend>Year of Study</legend>
+                    <select name="year_of_study" id="year_of_study" required>
+                        <option value="1">Year 1</option>
+                        <option value="2">Year 2</option>
+                        <option value="3">Year 3</option>
+                        <option value="4">Year 4</option>
+                        <option value="5">Year 5</option>
+                        <option value="NA">Not Applicable as I have already graduated</option>
+                    </select>
+                </label>
+
+            </fieldset>
+
+        <fieldset class="input_text_fieldset">
+
+            <label for="start_date"><legend>Internship Start Date</legend>
+                <p class="instruction">
+                    Please let us know your earliest availability to start the internship.<br><br>
+                    Interns are REQUIRED to start on a Monday and end on a Friday.<br>
+                    Kindly note that all interns are required to commit at least 12 weeks (3 months) of full-time internship.
+                </p>
+                <input type="date" name="start_date" id="start_date" placeholder="DD/MM/YYYY">
+            </label>
+            <label for="end_date"><legend>Internship End Date</legend>
+                <input type="date" name="end_date" id="end_date" placeholder="DD/MM/YYYY">
+            </label>
+
+        </fieldset>
+
+        <fieldset>
+            <p class="terms_and_conditions">By submitting this application, you confirm that all information provided is accurate and truthful. Acceptance into the internship program is subject to eligibility, availability, and the organization's discretion. Interns must adhere to company policies, maintain confidentiality, and conduct themselves professionally. The organization reserves the right to modify, suspend, or terminate the internship at any time. By applying, you agree to these terms and conditions.</p>
+        </fieldset>
+
+            <input type="submit" value="Submit Application">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,2 +1,2 @@
 # internship-form-project
-Creating a sample internship project form
+Creating a sample internship application form
